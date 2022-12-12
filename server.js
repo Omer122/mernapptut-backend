@@ -18,7 +18,7 @@ app.use('/api/users', require('./routes/userRoutes'));
 
 // Serve frontend
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../frontend/build'))); // link to build production folder
+  app.use(express.static(path.join(__dirname, '../frontend/build'))); // link to build production folder- npm run build
 
   app.get('*', (req, res) => //get any route 
     res.sendFile(
